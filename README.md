@@ -1,5 +1,10 @@
 # Grafana Installation and Dashboard Setup on Ubuntu Server in Azure
 
+## Introduction
+
+Grafana is a powerful open-source analytics and visualization platform widely used for monitoring system performance. This document outlines the process of setting up Grafana on an Ubuntu virtual machine hosted on Microsoft Azure. The setup involves installing Grafana, configuring the necessary dependencies, setting up Azure Monitor as a data source, and visualizing system performance metrics. Additionally, the document highlights security configurations, networking considerations, and troubleshooting steps taken to resolve issues encountered during the installation and setup process.
+
+
 
 
 ## Setup Process
@@ -134,3 +139,6 @@ sudo ufw status
 
 **Note:** Due to Entra ID issues, the data source is not fully functional. Further troubleshooting on Azure IAM permissions may be required.
 
+## Conclusion
+
+Successfully setting up Grafana on an Azure-hosted Ubuntu virtual machine enables real-time monitoring of system performance using Azure Monitor. By configuring inbound security rules and addressing authentication challenges, the system is now accessible for further customization and expansion. While some challenges, such as Entra ID authentication issues, persist, future improvements can focus on refining IAM role assignments and troubleshooting Azure permissions. This setup serves as a foundation for advanced monitoring solutions, ensuring better visibility and performance management for cloud-based infrastructure.
