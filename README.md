@@ -33,15 +33,19 @@ Grafana is a powerful open-source analytics and visualization platform widely us
 3. Open Terminal and connect via SSH:
    ```sh
    ssh adminuser@<your-vm-public-ip>
-   ```
-4. Enter the password if prompted.
+![Screenshot](./s2.png)
+   
+    ```
+5. Enter the password if prompted.
 
 ### Step 3: Prepare Ubuntu Server
 1. Update system packages:
    ```sh
    sudo apt-get update && sudo apt-get upgrade -y
    ```
-2. Install dependencies:
+   ![Screenshot](./s3.png)
+   
+3. Install dependencies:
    ```sh
    sudo apt-get install -y apt-transport-https software-properties-common wget
    ```
@@ -58,22 +62,28 @@ Grafana is a powerful open-source analytics and visualization platform widely us
    sudo apt-get update
    sudo apt-get install grafana -y
    ```
-3. Start and enable Grafana service:
+
+   ![Screenshot](./s4.png)
+   
+4. Start and enable Grafana service:
    ```sh
    sudo systemctl daemon-reload
    sudo systemctl start grafana-server
    sudo systemctl enable grafana-server
    ```
-4. Verify Grafana is running:
+5. Verify Grafana is running:
    ```sh
    sudo systemctl status grafana-server
    ```
+![Screenshot](./s5.png)
 
 ### Step 5: Allow Port 3000 for Grafana
 ```sh
 sudo ufw allow 3000/tcp
 sudo ufw status
 ```
+
+![Screenshot](./s6.png)
 
 ### Step 6: Connect Grafana to Azure Monitor
 1. **Enable Managed Identity for the VM:**
@@ -98,29 +108,40 @@ sudo ufw status
    ```sh
    sudo systemctl restart grafana-server
    ```
+![Screenshot](./s7.png)
+![Screenshot](./s8.png)
 
 ### Step 7: Access Grafana and Add Data Source
 1. Open **http://<your-vm-public-ip>:3000**.
-2. Log in with:
+   ![Screenshot](./s9.png)
+   ![Screenshot](./s10.png)
+3. Log in with:
    - **Username:** admin
    - **Password:** admin (change it after first login).
-3. Add **Azure Monitor** as Data Source:
+4. Add **Azure Monitor** as Data Source:
    - Click **Configuration > Data Sources > Add data source**.
    - Select **Azure Monitor**.
    - In **Authentication**, choose **Managed Identity**.
    - Click **Save & Test**.
+       ![Screenshot](./s11.png)
 
 ### Step 8: Create a Dashboard
 1. Click **+** on the left sidebar > **Dashboard**.
 2. Click **Add new panel**.
 3. Select **Azure Monitor** as the data source.
-4. Choose metrics like:
+     ![Screenshot](./s12.png)
+5. Choose metrics like:
   - [x] Add CPU metrics panel
 - [x] Add memory metrics panel
 - [x] Add disk I/O panel
 - [x] Add network I/O panel
 - [x] Save and test dashboard
+        ![Screenshot](./s13.png)
+        ![Screenshot](./s14.png)
+        ![Screenshot](./s15.png)
+      
 5. Customize visualization and click **Apply**, then **Save Dashboard**.
+     ![Screenshot](./s16.png)
 
 ---
 
