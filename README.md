@@ -131,19 +131,6 @@ sudo ufw status
 - 
 ---
 
-## Submission
-1. **Screenshots:**
-   - Grafana installation.
-   - Grafana running (`sudo systemctl status grafana-server`).
-   - Azure Monitor data source setup.
-   - Final dashboard with performance metrics.
-2. **Report (.MD file):**
-   - Steps taken.
-   - Issues faced and solutions attempted.
-3. **GitHub Submission:**
-   - Create a repository.
-   - Upload screenshots and `README.md`.
-   - Submit the GitHub link.
 
 **Note:** Due to Entra ID issues, the data source is not fully functional. Further troubleshooting on Azure IAM permissions may be required.
 
