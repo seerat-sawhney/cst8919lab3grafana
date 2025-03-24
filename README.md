@@ -154,7 +154,7 @@ sudo ufw status
 ### Problem: Initial Inability to Access Grafana Interface
 - **Issue:** Could not access Grafana on port 3000 initially.
 - **Solution:** Added an inbound security rule for port 3000 in Azure VM networking settings.
-- 
+  
 ---
 
 ## Conclusion
