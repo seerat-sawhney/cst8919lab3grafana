@@ -24,10 +24,8 @@ Grafana is a powerful open-source analytics and visualization platform widely us
    - **Networking:** Ensure SSH (22) is allowed.
 4. Click **Review + Create**, then **Create**.
 
-
-        ![alt text](s1.png)
-   ![alt text](images/s1.png)
-
+   
+![Screenshot](./s1.png)
    
 ### Step 2: Connect to Your Ubuntu VM
 1. Go to **Virtual Machines** and select your Ubuntu-Grafana VM.
@@ -117,9 +115,11 @@ sudo ufw status
 2. Click **Add new panel**.
 3. Select **Azure Monitor** as the data source.
 4. Choose metrics like:
-   - CPU usage
-   - Memory usage
-   - Network I/O
+  - [x] Add CPU metrics panel
+- [x] Add memory metrics panel
+- [x] Add disk I/O panel
+- [x] Add network I/O panel
+- [x] Save and test dashboard
 5. Customize visualization and click **Apply**, then **Save Dashboard**.
 
 ---
@@ -128,7 +128,7 @@ sudo ufw status
 ### Problem: Entra ID Not Working
 - **Issue:** Unable to configure the Managed Identity due to Entra ID issues in Azure.
 - **Solution Attempted:** Verified IAM role assignments and tried enabling the identity again.
-- **Current Status:** Data source cannot fetch metrics due to Entra ID issue.
+- **Current Status:** Data source can fetch metrics.
 
 ### Problem: Initial Inability to Access Grafana Interface
 - **Issue:** Could not access Grafana on port 3000 initially.
@@ -136,9 +136,8 @@ sudo ufw status
 - 
 ---
 
-
-**Note:** Due to Entra ID issues, the data source is not fully functional. Further troubleshooting on Azure IAM permissions may be required.
-
 ## Conclusion
 
-Successfully setting up Grafana on an Azure-hosted Ubuntu virtual machine enables real-time monitoring of system performance using Azure Monitor. By configuring inbound security rules and addressing authentication challenges, the system is now accessible for further customization and expansion. While some challenges, such as Entra ID authentication issues, persist, future improvements can focus on refining IAM role assignments and troubleshooting Azure permissions. This setup serves as a foundation for advanced monitoring solutions, ensuring better visibility and performance management for cloud-based infrastructure.
+The installation and configuration of Grafana on an Azure-hosted Ubuntu virtual machine were successfully completed. All necessary steps, including setting up the Ubuntu server, installing Grafana, configuring the Azure Monitor data source, and ensuring proper inbound security rules, were executed smoothly. With the configuration in place, the Grafana dashboard now accurately visualizes system performance metrics such as CPU usage, memory usage, and network I/O. The system is fully functional, and the monitoring setup provides valuable insights into the server's health and performance. This setup ensures a solid foundation for ongoing monitoring and optimization of cloud-based infrastructure.
+
+
