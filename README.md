@@ -37,6 +37,8 @@ Compile your screenshots and report into an MD file. Submit the link for the Lab
 
 
         ![alt text](s1.png)
+   ![alt text](images/s1.png)
+
    
 ### Step 2: Connect to Your Ubuntu VM
 1. Go to **Virtual Machines** and select your Ubuntu-Grafana VM.
