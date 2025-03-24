@@ -1,22 +1,6 @@
 # Grafana Installation and Dashboard Setup on Ubuntu Server in Azure
 
-  
 
-## Deliverables
-- A functioning Grafana dashboard showing your Ubuntu server's performance metrics.
-- Screenshots documenting the setup process and the final dashboard.
-- A brief report describing the steps taken and any issues encountered during the installation and configuration process.
-
-## Evaluation Criteria
-- Successful installation of Grafana and Azure Monitor agent.
-- Correct configuration of data source in Grafana.
-- Effective visualization of the Ubuntu server performance metrics.
-- Clarity and completeness of the submitted documentation.
-
-## Submission Instructions
-Compile your screenshots and report into an MD file. Submit the link for the Lab into your GitHub account to the submission portal before the due date.
-
----
 
 ## Setup Process
 
